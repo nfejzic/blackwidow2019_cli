@@ -58,12 +58,14 @@ Systemd script - name it what you want, I named it **razer-setup.service**
 Description=Stop the openrazer-daemon so that media keys function
 
 [Service]
-ExecStart=/home/nfejzic/.config/custom_scripts/blackwidow2019_cli.sh 0003:1532:0241.0003
+ExecStart=/home/username/.config/custom_scripts/blackwidow2019_cli.sh 0003:1532:0241.0003
 
 [Install]
 WantedBy=default.target
 
 ```
+
+**Keep in mind** that the ```/home/username/.config/custom_script/blackwidow2019_cli.sh``` is path to this script! Replace ```username``` with your username, and complete path with wherever you placed the ```blackwidow2019_cli.sh``` script!
 
 Place the **razer-setup.service** file in ```~/.config/systemd/user/``` directory.
 
