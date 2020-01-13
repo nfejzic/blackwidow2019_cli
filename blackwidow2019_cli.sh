@@ -7,10 +7,10 @@ dev_path="/sys/bus/hid/drivers/razerkbd/0003:1532:0241.0003"
 fKeys="\xff\xa2\x00" # - warm yello - wand ESC key 
 letters="\x00\xff\x80" # - seafoam green
 modK="\xff\x22\x00" # - orangish red - Mod keys such as ctrl, used for hjkl in my case
-posK="\xff\x80\x0" # - same as fKeys - Position keys - home, pos1, page up / down etc.
+posK="\xff\xa2\x00" # - same as fKeys - Position keys - home, pos1, page up / down etc.
 numK="\x00\x80\xff" # - sky blue
 none="\x0\x0\x0" # empty, I don't have these keys on my keyboard
-other="\xff\x80\x00" # any other keys - currently not used on my keyboard
+other="\xff\xa2\x00" # any other keys - currently not used on my keyboard
 
 function assignColor {
     selector=$1
@@ -49,7 +49,7 @@ function assignColor {
 
 }
 
-if [[ "$1" =~ [0-9]{4}:[0-9]{4}:[0-9]{4}.[0-9]{4} ]]
+if [[ "$1" =~ [0-9]{4}:[0-9]{4}:[0-9]{4}\.[0-9]{4} ]]
 then
     dev_path="/sys/bus/hid/drivers/razerkbd/$1"
     echo -e "Device path: $dev_path \n"
