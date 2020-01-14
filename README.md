@@ -56,12 +56,13 @@ Systemd script - name it what you want, I named it **razer-setup.service**
 ```
 [Unit]
 Description=Stop the openrazer-daemon so that media keys function
+After=suspend.target
 
 [Service]
 ExecStart=/home/username/.config/custom_scripts/blackwidow2019_cli.sh 0003:1532:0241.0003
 
 [Install]
-WantedBy=default.target
+WantedBy=multi-user.target sleep.target
 
 ```
 
