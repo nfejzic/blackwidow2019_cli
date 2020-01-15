@@ -10,10 +10,10 @@ That's why I created this script.
 
 ## Usage
 
-This is a simple bash script, which accepts few parameters. First one is a must, and is a keyboard id.
-It is formatted as: ```xxxx:xxxx:xxxx.xxxx``` and can be found in ```/sys/bus/hid/drivers/razerkbd/``` folder.
+It should automatically detect the driver folder for the keyboard. Keyboard ID
+is not needed.
 
-After this parameter, colors can be specified like this: selector=color
+Colors can be specified like this: selector=color
 Color is to be specified in HEX format for RGB values, for example ```ff0000``` for **red**.
 Selector is one of the specified:
 
